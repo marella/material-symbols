@@ -1,0 +1,142 @@
+.demo-icon {
+  display: inline-block;
+  width: 98px;
+  height: 98px;
+  padding: 10px;
+  text-align: center;
+}
+
+.demo-icon > span {
+  font-size: 48px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.demo-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.demo-sticky > div {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.demo-search > span {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 18px;
+}
+
+.demo-search input {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  padding-left: 50px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background-color: #f1f3f4;
+}
+
+.demo-search input:hover {
+  background-color: #e9ebec;
+}
+
+.demo-search input:focus {
+  border-color: #0366d6;
+  background-color: #fff;
+  outline: 0;
+}
+
+.demo-customization label {
+  margin-right: 5px;
+  margin-left: 15px;
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.demo-customization select {
+  width: 50px;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* see https://github.com/primer/css/blob/main/src/tooltips/tooltips.scss */
+
+.tooltipped {
+  position: relative;
+}
+
+.tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  padding: 10px;
+  font: normal normal 11px/1.5 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, Courier, monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: #000;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: #000;
+  pointer-events: none;
+  content: '';
+  border: 6px solid transparent;
+  opacity: 0;
+}
+
+.tooltipped:hover::before,
+.tooltipped:hover::after {
+  display: inline-block;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.tooltipped::after {
+  right: 50%;
+  bottom: 100%;
+  margin-bottom: 6px;
+}
+
+.tooltipped::before {
+  top: -7px;
+  right: 50%;
+  bottom: auto;
+  margin-right: -6px;
+  border-top-color: #000;
+}
+
+.tooltipped::after {
+  transform: translateX(50%);
+}

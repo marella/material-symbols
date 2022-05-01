@@ -1,0 +1,57 @@
+name: Auto Update
+
+on:
+  schedule:
+    - cron: '23 1 * * *' # Runs at 01:23 UTC every day
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Force Update
+        default: '0'
+      dry:
+        description: Dry Run
+        default: '1'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - uses: git-actions/set-user@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm ci
+      - name: Update
+        run: |
+          force="${{ github.event.inputs.force }}"
+          dry="${{ github.event.inputs.dry }}"
+          bump="patch"
+
+          # Check for Updates
+          status=0
+          npm run check || status=$?
+          if [ $status -eq 0 ] || [ $status -eq 4 ]; then
+            if [ "$force" != "1" ]; then
+              exit 0 # exit if there are no changes or if icons are only removed
+            fi
+          fi
+          if [ $status -ge 4 ]; then
+            bump="minor" # icons are removed from metadata API
+          fi
+
+          # Update
+          npm run update
+          git add --all # Use 'git add --ignore-removal .' to keep deleted SVGs
+          git commit -m 'Auto Update' || [ "$force" = "1" ] || exit 1
+
+          # Bump Version
+          npm run version "$bump"
+
+          # Push
+          if [ "$dry" = "1" ]; then
+            exit 0
+          fi
+          git push --follow-tags

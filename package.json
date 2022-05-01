@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "workspaces": [
+    "material-symbols"
+  ],
+  "scripts": {
+    "check": "npm run download:metadata -- --status --dry-run",
+    "update": "npm run download && npm run build",
+    "download": "npm run download:font && npm run download:metadata",
+    "download:font": "npx @material-design-icons/scripts download font --symbols --to material-symbols --evergreen",
+    "download:metadata": "npx @material-design-icons/scripts download metadata --symbols",
+    "build": "npm run build -w material-symbols",
+    "version": "npm version -w material-symbols",
+    "postversion": "npm install && VERSION=$(node -p \"require('./material-symbols/package.json').version\") npm run git-commit-tag",
+    "git-commit-tag": "git commit -am $VERSION && git tag -a v$VERSION -m $VERSION",
+    "publish": "npm publish -w material-symbols"
+  },
+  "devDependencies": {
+    "@material-design-icons/scripts": "0.3.1"
+  }
+}
