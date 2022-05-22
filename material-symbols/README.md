@@ -1,8 +1,10 @@
 # [material-symbols](https://github.com/marella/material-symbols/tree/main/material-symbols)
 
-Latest variable icon fonts and CSS for material symbols.
+Latest variable icon fonts and CSS for Material Symbols.
 
 > This package is automatically updated, so it will always have the latest icons from Google.
+
+> For SVGs, see [`@material-symbols/svg-400`](https://www.npmjs.com/package/@material-symbols/svg-400)
 
 - [Installation](#installation)
 - [Usage](#usage)
