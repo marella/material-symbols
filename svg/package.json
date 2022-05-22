@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "init": "node init.mjs",
+    "build": "svgo --config svgo.config.js --quiet --recursive ."
+  },
+  "devDependencies": {
+    "svgo": "2.3.1"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@material-symbols/svg-{{weight}}",
+  "version": "{{version}}",
+  "description": "Latest optimized SVGs with weight {{weight}} for Material Symbols.",
+  "files": [
+    "{outlined,rounded,sharp}/*.svg"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marella/material-symbols.git",
+    "directory": "svg/{{weight}}"
+  },
+  "bugs": {
+    "url": "https://github.com/marella/material-symbols/issues"
+  },
+  "homepage": "https://marella.github.io/material-symbols/demo/",
+  "keywords": [
+    "material-symbols",
+    "material-icons",
+    "material-design-icons",
+    "material-design",
+    "material",
+    "symbols",
+    "icons",
+    "svg"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
