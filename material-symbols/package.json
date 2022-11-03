@@ -1,6 +1,6 @@
 {
   "name": "material-symbols",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "description": "Latest variable icon fonts and CSS for Material Symbols.",
   "main": "index.css",
   "sass": "index.scss",
