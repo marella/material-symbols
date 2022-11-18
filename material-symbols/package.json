@@ -4,7 +4,9 @@
   "description": "Latest variable icon fonts and CSS for Material Symbols.",
   "main": "index.css",
   "sass": "index.scss",
+  "types": "index.d.ts",
   "files": [
+    "index.d.ts",
     "*.{css,scss,woff2}"
   ],
   "scripts": {
