@@ -13,7 +13,7 @@
     "build": "sass --no-source-map --no-error-css ."
   },
   "devDependencies": {
-    "sass": "1.51.0"
+    "sass": "1.56.1"
   },
   "license": "Apache-2.0",
   "repository": {
