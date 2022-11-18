@@ -6,6 +6,7 @@
  */
 
 const { extendDefaultPlugins } = require('svgo');
+const addViewBox = require('svgo-add-viewbox');
 
 module.exports = {
   multipass: true,
@@ -29,5 +30,9 @@ module.exports = {
       active: false,
     },
     'sortAttrs',
+    {
+      name: 'addViewBox',
+      ...addViewBox,
+    },
   ]),
 };
