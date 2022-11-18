@@ -30,6 +30,6 @@
     "publish": "npm publish -w material-symbols -w svg/100 -w svg/200 -w svg/300 -w svg/400 -w svg/500 -w svg/600 -w svg/700"
   },
   "devDependencies": {
-    "@material-design-icons/scripts": "0.4.1"
+    "@material-design-icons/scripts": "0.5.0"
   }
 }
