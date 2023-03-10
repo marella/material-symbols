@@ -1,6 +1,6 @@
 {
   "name": "@material-symbols/svg-600",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "description": "Latest optimized SVGs with weight 600 for Material Symbols.",
   "files": [
     "{outlined,rounded,sharp}/*.svg"
