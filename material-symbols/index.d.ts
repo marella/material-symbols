@@ -2133,6 +2133,7 @@ type MaterialSymbols = [
   "screenshot_keyboard",
   "screenshot_monitor",
   "screenshot_region",
+  "screenshot_tablet",
   "scuba_diving",
   "sd",
   "sd_card",
