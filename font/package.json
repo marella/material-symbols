@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "init": "node init.mjs",
+    "build": "set -eu; for w in 100 200 300 400 500 600 700; do sass --no-source-map --no-error-css $w; done"
+  },
+  "devDependencies": {
+    "sass": "1.56.1"
+  }
+}

@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "init": "node init.mjs",
-    "build": "for w in 100 200 300 400 500 600 700; do svgo --config svgo.config.js --quiet --recursive $w; done"
+    "build": "set -eu; for w in 100 200 300 400 500 600 700; do svgo --config svgo.config.js --quiet --recursive $w; done"
   },
   "devDependencies": {
     "svgo": "2.8.0",

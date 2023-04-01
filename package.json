@@ -2,6 +2,15 @@
   "private": true,
   "workspaces": [
     "material-symbols",
+    "font",
+    "font/font",
+    "font/100",
+    "font/200",
+    "font/300",
+    "font/400",
+    "font/500",
+    "font/600",
+    "font/700",
     "svg",
     "svg/100",
     "svg/200",
@@ -12,26 +21,28 @@
     "svg/700"
   ],
   "scripts": {
-    "init": "npm run init -w svg --if-present",
+    "init": "npm run init -w font -w svg --if-present",
     "check": "npm run download:metadata -- --status --dry-run",
     "update": "npm run clean && npm run download && npm run generate && npm run build",
     "clean": "npm run clean:svg",
-    "clean:svg": "for w in 100 200 300 400 500 600 700; do npx @material-design-icons/scripts delete svg --symbols --in svg/$w; done",
-    "download": "npm run download:font && npm run download:svg && npm run download:metadata",
-    "download:font": "npx @material-design-icons/scripts download font --symbols --to material-symbols --evergreen",
-    "download:svg": "for w in 100 200 300 400 500 600 700; do npx @material-design-icons/scripts download svg --symbols --weight $w --to svg/$w; done",
+    "clean:svg": "set -eu; for w in 100 200 300 400 500 600 700; do npx @material-design-icons/scripts delete svg --symbols --in svg/$w; done",
+    "download": "npm run download:font && npm run download:fonts && npm run download:svg && npm run download:metadata",
+    "download:font": "npx @material-design-icons/scripts download font --symbols --evergreen --to material-symbols",
+    "download:fonts": "set -eu; for w in 100 200 300 400 500 600 700; do npx @material-design-icons/scripts download font --symbols --evergreen --weight $w --grade 0 --size 48 --to font/$w; done",
+    "download:svg": "set -eu; for w in 100 200 300 400 500 600 700; do npx @material-design-icons/scripts download svg --symbols --weight $w --to svg/$w; done",
     "download:metadata": "npx @material-design-icons/scripts download metadata --symbols",
-    "generate": "npm run generate:types",
+    "generate": "npm run generate:types && npm run copy-types",
     "generate:types": "npx @material-design-icons/scripts generate types --symbols --in material-symbols",
+    "copy-types": "set -eu; for w in 100 200 300 400 500 600 700; do cp material-symbols/index.d.ts font/$w; done",
     "build": "npm run build:font && npm run build:svg",
-    "build:font": "npm run build -w material-symbols",
+    "build:font": "npm run build -w material-symbols -w font --if-present",
     "build:svg": "npm run build -w svg --if-present",
-    "version": "npm version -w material-symbols -w svg/100 -w svg/200 -w svg/300 -w svg/400 -w svg/500 -w svg/600 -w svg/700",
+    "version": "npm version -w material-symbols -w font/100 -w font/200 -w font/300 -w font/400 -w font/500 -w font/600 -w font/700 -w svg/100 -w svg/200 -w svg/300 -w svg/400 -w svg/500 -w svg/600 -w svg/700",
     "postversion": "npm install && VERSION=$(node -p \"require('./material-symbols/package.json').version\") npm run git-commit-tag",
     "git-commit-tag": "git commit -am $VERSION && git tag -a v$VERSION -m $VERSION",
-    "publish": "npm publish -w material-symbols -w svg/100 -w svg/200 -w svg/300 -w svg/400 -w svg/500 -w svg/600 -w svg/700"
+    "publish": "npm publish -w material-symbols -w font/100 -w font/200 -w font/300 -w font/400 -w font/500 -w font/600 -w font/700 -w svg/100 -w svg/200 -w svg/300 -w svg/400 -w svg/500 -w svg/600 -w svg/700"
   },
   "devDependencies": {
-    "@material-design-icons/scripts": "0.5.1"
+    "@material-design-icons/scripts": "0.5.2"
   }
 }
