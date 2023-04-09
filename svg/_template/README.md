@@ -4,7 +4,7 @@ Latest optimized SVGs with weight {{weight}} for Material Symbols.
 
 > This package is automatically updated, so it will always have the latest icons from Google.
 
-> For variable icon fonts, see [`material-symbols`](https://www.npmjs.com/package/material-symbols)
+> For variable icon fonts, see [`@material-symbols/font-{{weight}}`](https://www.npmjs.com/package/@material-symbols/font-{{weight}})
 
 - [Installation](#installation)
 - [Usage](#usage)

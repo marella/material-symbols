@@ -4,6 +4,8 @@ Latest variable icon fonts and CSS for Material Symbols.
 
 > This package is automatically updated, so it will always have the latest icons from Google.
 
+> For fonts with fewer variations, see [`@material-symbols/font-400`](https://www.npmjs.com/package/@material-symbols/font-400)
+>
 > For SVGs, see [`@material-symbols/svg-400`](https://www.npmjs.com/package/@material-symbols/svg-400)
 
 - [Installation](#installation)
