@@ -45,7 +45,7 @@
     "version": "set -eu; for ws in material-symbols metadata; do npm version -w $ws; done; for w in 100 200 300 400 500 600 700; do for type in font svg path; do npm version -w $type/$w; done; done",
     "postversion": "npm install && VERSION=$(node -p \"require('./material-symbols/package.json').version\") npm run git-commit-tag",
     "git-commit-tag": "git commit -am $VERSION && git tag -a v$VERSION -m $VERSION",
-    "publish": "npm publish -w material-symbols -w font/100 -w font/200 -w font/300 -w font/400 -w font/500 -w font/600 -w font/700 -w svg/100 -w svg/200 -w svg/300 -w svg/400 -w svg/500 -w svg/600 -w svg/700 -w metadata"
+    "publish": "set -eu; for ws in material-symbols metadata; do npm publish -w $ws; done; for w in 100 200 300 400 500 600 700; do for type in font svg path; do npm publish -w $type/$w; done; done"
   },
   "devDependencies": {
     "@material-design-icons/scripts": "0.5.2",
