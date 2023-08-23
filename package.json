@@ -20,6 +20,13 @@
     "svg/600",
     "svg/700",
     "path",
+    "path/100",
+    "path/200",
+    "path/300",
+    "path/400",
+    "path/500",
+    "path/600",
+    "path/700",
     "metadata"
   ],
   "scripts": {
