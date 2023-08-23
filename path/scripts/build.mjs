@@ -2,9 +2,8 @@ import path from "node:path";
 import { existsSync } from "node:fs";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { parse } from "svg-parser";
-import { distDir, svgDir, WEIGHTS } from "../index.mjs";
+import { distDir, svgDir, WEIGHTS, STYLES } from "../index.mjs";
 
-const STYLES = ['outlined', 'rounded', 'sharp'];
 const EXPORT_PREFIX = 'ms';
 
 /**
