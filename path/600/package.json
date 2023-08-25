@@ -3,7 +3,8 @@
   "version": "0.11.0",
   "description": "Latest SVG path string exports with weight 600 for Material Symbols.",
   "files": [
-    "{outlined,rounded,sharp}/*.js"
+    "{outlined,rounded,sharp}/*.js",
+    "{outlined,rounded,sharp}/*.d.ts"
   ],
   "exports": {
     "./outlined": "./outlined/index.js",
