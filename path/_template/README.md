@@ -43,8 +43,8 @@ For example:
 
 | Icon       | Style      | Fill | Export Name        | Import Path                                   |
 |------------|------------|------|--------------------|-----------------------------------------------|
-| `home`     | `outlined` | 0    | `msSearch`         | `@material-symbols/path-{{weight}}/outlined/` |
-| `search`   | `rounded`  | 0    | `msHome`           | `@material-symbols/path-{{weight}}/rounded/`  |
+| `home`     | `outlined` | 0    | `msHome`           | `@material-symbols/path-{{weight}}/outlined/` |
+| `search`   | `rounded`  | 0    | `msSearch`         | `@material-symbols/path-{{weight}}/rounded/`  |
 | `favorite` | `sharp`    | 1    | `msFavoriteFilled` | `@material-symbols/path-{{weight}}/sharp/`    |
 
 The above translates to the following import statements:
