@@ -1,6 +1,6 @@
 {
   "name": "@material-symbols/font-600",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "description": "Latest variable icon fonts with weight 600 for Material Symbols.",
   "main": "index.css",
   "sass": "index.scss",
