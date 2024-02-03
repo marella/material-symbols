@@ -630,6 +630,7 @@ type MaterialSymbols = [
   "collections_bookmark",
   "colorize",
   "colors",
+  "comedy_mask",
   "comic_bubble",
   "comment",
   "comment_bank",
