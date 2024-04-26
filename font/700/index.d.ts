@@ -2565,6 +2565,7 @@ type MaterialSymbols = [
   "shield_with_house",
   "shift",
   "shift_lock",
+  "shift_lock_off",
   "shop",
   "shop_two",
   "shopping_bag",
