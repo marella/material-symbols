@@ -1,6 +1,6 @@
 {
   "name": "@material-symbols/metadata",
-  "version": "0.31.5",
+  "version": "0.31.6",
   "description": "Metadata for Material Symbols.",
   "files": [
     "versions.json"
