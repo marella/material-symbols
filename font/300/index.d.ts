@@ -2095,6 +2095,7 @@ type MaterialSymbols = [
   "movie_edit",
   "movie_info",
   "movie_off",
+  "movie_speaker",
   "moving",
   "moving_beds",
   "moving_ministry",
