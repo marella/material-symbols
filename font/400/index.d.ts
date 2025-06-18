@@ -638,6 +638,7 @@ type MaterialSymbols = [
   "check_box",
   "check_box_outline_blank",
   "check_circle",
+  "check_circle_unread",
   "check_in_out",
   "check_indeterminate_small",
   "check_small",
