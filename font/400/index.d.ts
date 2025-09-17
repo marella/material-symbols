@@ -297,6 +297,7 @@ type MaterialSymbols = [
   "aspect_ratio",
   "assignment",
   "assignment_add",
+  "assignment_globe",
   "assignment_ind",
   "assignment_late",
   "assignment_return",
