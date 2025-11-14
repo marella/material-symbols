@@ -1712,6 +1712,7 @@ type MaterialSymbols = [
   "hourglass_arrow_down",
   "hourglass_arrow_up",
   "hourglass_bottom",
+  "hourglass_check",
   "hourglass_disabled",
   "hourglass_empty",
   "hourglass_pause",
