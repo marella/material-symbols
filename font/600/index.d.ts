@@ -3606,6 +3606,7 @@ type MaterialSymbols = [
   "video_search",
   "video_settings",
   "video_stable",
+  "video_template",
   "videocam",
   "videocam_alert",
   "videocam_off",
