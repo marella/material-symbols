@@ -223,6 +223,7 @@ type MaterialSymbols = [
   "android_wifi_4_bar_question",
   "animated_images",
   "animation",
+  "antigravity",
   "aod_tablet",
   "aod_watch",
   "apartment",
