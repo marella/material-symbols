@@ -1,6 +1,6 @@
 {
   "name": "@material-symbols/font-700",
-  "version": "0.40.3",
+  "version": "0.40.4",
   "description": "Latest variable icon fonts with weight 700 for Material Symbols.",
   "main": "index.css",
   "sass": "index.scss",
