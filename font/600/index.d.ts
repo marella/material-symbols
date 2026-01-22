@@ -2997,6 +2997,7 @@ type MaterialSymbols = [
   "shift",
   "shift_lock",
   "shift_lock_off",
+  "shoe_cleats",
   "shop",
   "shop_two",
   "shopping_bag",
