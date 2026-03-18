@@ -5,17 +5,19 @@ on:
     tags:
       - v*.*.*
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 16
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - name: Publish
         run: npm run publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
