@@ -3067,6 +3067,7 @@ type MaterialSymbols = [
   "sick",
   "side_navigation",
   "sign_language",
+  "sign_language_off",
   "signal_cellular_0_bar",
   "signal_cellular_1_bar",
   "signal_cellular_2_bar",
