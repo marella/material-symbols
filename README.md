@@ -21,5 +21,12 @@ Package | Description
 [`@material-symbols/svg-500`](https://github.com/marella/material-symbols/tree/main/svg/500#readme) | Latest optimized SVGs with weight 500 for Material Symbols.
 [`@material-symbols/svg-600`](https://github.com/marella/material-symbols/tree/main/svg/600#readme) | Latest optimized SVGs with weight 600 for Material Symbols.
 [`@material-symbols/svg-700`](https://github.com/marella/material-symbols/tree/main/svg/700#readme) | Latest optimized SVGs with weight 700 for Material Symbols.
+[`@material-symbols/path-100`](https://github.com/marella/material-symbols/tree/main/svg/100#readme) | Latest SVG path exports with weight 100 for Material Symbols.
+[`@material-symbols/path-200`](https://github.com/marella/material-symbols/tree/main/svg/200#readme) | Latest SVG path exports with weight 200 for Material Symbols.
+[`@material-symbols/path-300`](https://github.com/marella/material-symbols/tree/main/svg/300#readme) | Latest SVG path exports with weight 300 for Material Symbols.
+[`@material-symbols/path-400`](https://github.com/marella/material-symbols/tree/main/svg/400#readme) | Latest SVG path exports with weight 400 for Material Symbols.
+[`@material-symbols/path-500`](https://github.com/marella/material-symbols/tree/main/svg/500#readme) | Latest SVG path exports with weight 500 for Material Symbols.
+[`@material-symbols/path-600`](https://github.com/marella/material-symbols/tree/main/svg/600#readme) | Latest SVG path exports with weight 600 for Material Symbols.
+[`@material-symbols/path-700`](https://github.com/marella/material-symbols/tree/main/svg/700#readme) | Latest SVG path exports with weight 700 for Material Symbols.
 
 All packages are automatically updated and published using GitHub Actions, so they will always have the latest icons from Google.
