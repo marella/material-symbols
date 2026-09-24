@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "init": "node ./scripts/init.mjs",
+    "build": "node ./scripts/build.mjs",
+    "clean": "node ./scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/svg-parser": "^2.0.3",
+    "svg-parser": "^2.0.4"
+  }
+}
