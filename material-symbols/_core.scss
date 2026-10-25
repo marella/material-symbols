@@ -1,12 +1,13 @@
+@use "sass:string";
 $material-symbols-font-path: './' !default;
 
 // @see https://github.com/twbs/bootstrap/blob/main/scss/_functions.scss
 @function material-symbols-str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
+  $index: string.index($string, $search);
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
+    @return string.slice($string, 1, $index - 1) + $replace +
       material-symbols-str-replace(
-        str-slice($string, $index + str-length($search)),
+        string.slice($string, $index + string.length($search)),
         $search,
         $replace
       );
@@ -15,7 +16,7 @@ $material-symbols-font-path: './' !default;
 }
 
 @mixin material-symbols-font($font-family) {
-  $class-name: to-lower-case($font-family);
+  $class-name: string.to-lower-case($font-family);
   $class-name: material-symbols-str-replace($class-name, ' ', '-');
   $font-file: $material-symbols-font-path + $class-name;
 
